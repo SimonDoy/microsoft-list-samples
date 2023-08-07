@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.11.2.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-6AAF6DDE4E13405A9E59693682B6D7F7">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-6AAF6DDE4E13405A9E59693682B6D7F7" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="2" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:Lists>
+        <pnp:ListInstance Title="Social Media Feeds" Description="List which contains the social media feeds that need to be checked." DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Social Media Feeds" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Social Media Feeds/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Social Media Feeds/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Social Media Feeds/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{FAD333C0-85AA-4CC8-8FE0-0FC3D6B38FBF}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Social Media Feeds/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="FeedUrl" />
+                <FieldRef Name="LastChecked" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="FeedUrl" Format="Hyperlink" IsModern="TRUE" Name="FeedUrl" Title="FeedUrl" Type="URL" ID="{f31a1144-ee70-42a9-aa54-864ca2a17d4f}" SourceID="{{listid:Social Media Feeds}}" StaticName="FeedUrl" ColName="nvarchar4" RowOrdinal="0" ColName2="nvarchar5" RowOrdinal2="0" />
+            <Field Description="date and time the feed was last checked." DisplayName="LastChecked" FriendlyDisplayFormat="Disabled" Format="DateTime" IsModern="TRUE" Name="LastChecked" Title="LastChecked" Type="DateTime" ID="{4ed8392b-0d3d-41af-a50a-4029f04899bd}" SourceID="{{listid:Social Media Feeds}}" StaticName="LastChecked" ColName="datetime1" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Social Media Posts" Description="This list holds social media posts." DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Social Media Posts" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Social Media Posts/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Social Media Posts/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Social Media Posts/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{5DDD042C-24B5-47BD-8083-A98B1A5B4DF7}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Social Media Posts/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="PostUrl" />
+                <FieldRef Name="PostContent" />
+                <FieldRef Name="ContentName" />
+                <FieldRef Name="LastUpdated" />
+                <FieldRef Name="FeedId" />
+                <FieldRef Name="Modified" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="PostUrl" Format="Hyperlink" IsModern="TRUE" Name="PostUrl" Title="PostUrl" Type="URL" ID="{66569371-a413-4dc0-826f-64f42fb1320e}" SourceID="{{listid:Social Media Posts}}" StaticName="PostUrl" ColName="nvarchar4" RowOrdinal="0" ColName2="nvarchar5" RowOrdinal2="0" />
+            <Field AppendOnly="FALSE" DisplayName="PostContent" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="PostContent" RichText="FALSE" RichTextMode="Compatible" Title="PostContent" Type="Note" ID="{92eb5b5f-8e03-4c8a-a941-0b669227daef}" SourceID="{{listid:Social Media Posts}}" StaticName="PostContent" ColName="ntext2" RowOrdinal="0" />
+            <Field DisplayName="ContentName" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="ContentName" Title="ContentName" Type="Text" ID="{49866301-5414-4fff-aef8-a5b80552886c}" SourceID="{{listid:Social Media Posts}}" StaticName="ContentName" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="LastUpdated" FriendlyDisplayFormat="Disabled" Format="DateTime" IsModern="TRUE" Name="LastUpdated" Title="LastUpdated" Type="DateTime" ID="{2b5f366a-2a60-4288-95ee-2a21fb3a7591}" SourceID="{{listid:Social Media Posts}}" StaticName="LastUpdated" ColName="datetime1" RowOrdinal="0" />
+            <Field Description="The feed identifier" DisplayName="FeedId" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="FeedId" Title="FeedId" Type="Text" ID="{5af0a2fa-68aa-4de0-8c22-bb3309f8587c}" SourceID="{{listid:Social Media Posts}}" StaticName="FeedId" ColName="nvarchar7" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
